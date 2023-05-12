@@ -1,0 +1,102 @@
+************************************************************************************************
+*                                                                                              *
+*   git --version --> versiyon kontrolünü yapar kurulum doğru ise bize bir versiyon verir      *
+*                                                                                              *
+************************************************************************************************
+*                                                                                              *
+*   git config --global user.name "Ahmet Baş"                                                  *
+*   git config --global user.email "ahba8184@gmail.com"                                        *
+*   Yapılan commit leri burada belirtilen isim ve eposta ile ilişkilendirir.                   *
+*   Repo da çalışan diğer kişiler bu isim ve e-postayı görür.                                  *
+*                                                                                              *
+************************************************************************************************
+*                                                                                              *
+*   git config --global color.ui true                                                          *
+*   Terminal de komutların renklendirilmesini sağlar                                           *
+*                                                                                              *
+*   • system parametresi kullanıldığında tüm kullanıcılar ve tüm repolar üzerinde etkili olur  *
+*   • global parametresi geçerli kullanıcının tüm repolar üzerinde etkili olur                 *
+*   • local parametresi ise sadece geçerli repo üzerinde etkili olur                           *
+*                                                                                              *
+************************************************************************************************
+*                                                                                              *
+*   git config --list --> yapılan ayarları listeler                                            *
+*                                                                                              *
+************************************************************************************************
+*                                                                                              *
+*   git init --> bilgisayarımızda bir projeyi versiyon sistemine alabilmek için kullanılır.    *
+*                proje klasöründe .git klasörü oluşturulur.                                    *
+*                local repomuzu saklayacaktır.                                                 *
+*                                                                                              *
+************************************************************************************************
+*                                                                                              *
+*   working space --> git add [dosya_adi]                  --> staging area                    *
+*                     git add . (herşeyi gönderir)                                             *
+*                                                                                              *
+*   staging area -->  git commit -m "bir mesaj"           --> commit store                     *
+*                     gitcommit -amend -m "yeni mesaj"                                         *
+*                                                                                              *
+************************************************************************************************
+*                                                                                              *
+*   git log --oneline --> Oluşturulan versiyonları görmek için bu komut kullanılır             *
+*                                                                                              *
+************************************************************************************************
+*                                                                                              *
+*   git status / git diff(Değişiklik görme) --> Working Space veya Staging area’ nın           *
+*   Git diff --staged                           durumunu görmek için kullanılır.               *
+*                                                                                              *
+************************************************************************************************
+*                                                                                              *
+*   git show [hash kod ilk 7 karakteri] --> versiyon içinde değişiklikleri gösterir            *
+*                                                                                              *
+************************************************************************************************
+*                                                                                              *
+*   git restore [dosya] --> Working space de tek bir dosyayı iptal eder                        *
+*   git restore .       --> Working space de tüm dosyaları iptal eder                          *
+*                                                                                              *
+*   git restore --staged [dosya] --> Stage Area da tek bir dosyayı iptal eder                  *
+*   git restore --staged .       --> Stage Area da tüm dosyaları iptal eder                    *
+*                                                                                              *
+*   git checkout [hash][dosya] --> Commit Store da dosya,hash ile belirtilen versiyona döner   *
+*   git checkout [hash] .      --> Commit Store da hash değeri verilen versiyona döner         *
+*                                                                                              *
+*   git reset --hard --> Working space değişikliklerini iptal eder, staging area yı boşaltır   *
+*                                                                                              *
+************************************************************************************************
+*                                                                                              *
+*   git checkout [hash] . --> Önceki veriyona geçiş içindir kalıcı değildir.                   *
+*   git commit –m"..."    --> Önceki veriyona geçişi kalıcı yapar.                             *
+*   git reset --hard[hash]--> Geri alınamayacak şekilde önceki versiyona döndürür              *
+*                                                                                              *
+************************************************************************************************
+*                  BRANCH KOMUTLARI                                                            *
+*   git branch [isim]       --> Yeni branch oluşturur                                          *
+*   git branch              --> Mevcut branch leri listeler                                    *
+*   git checkout [isim]     --> Branch aktif hale gelir                                        *
+*   git merge [isim]        --> İki branch i birleştirir                                       *
+*   git branch -m [isim]    --> Branch ismini değiştirir                                       *
+*   git branch –d [isim]    --> Branch i siler                                                 *
+*                                                                                              *
+************************************************************************************************
+*                                                                                              *
+*   git stash       --> Working space ve staging area daki değişiklikleri geçici olarak        *
+*                       hafızaya alır ve bu bölgeleri temizler                                 *
+*   git stash list  --> Hafızaya alınan değişiklikleri görmek için kullanılır                  *
+*   git stash pop   --> Hafızaya alınan değişiklikleri geri uygulamak için kullanılır          *
+*                                                                                              *
+************************************************************************************************
+*              GİT - GİTHUB KOMUTLARI                                                          *
+*   git push            --> Lokalde oluşturulan commit lerin github a gönderilmesi işlemidir   *
+*   git clone [url]     --> Github daki bir repoyu lokale indirme işlemidir                    *
+*   git pull            --> Fetch ve Merge işlemini tek başına yapar                           *
+*                                                                                              *
+*   git fetch       --> Değişiklikleri remote’dan local’e indirir                              *
+*   git merge       --> İndirilen değişiklikleri local repoya uygular                          *
+*                                                                                              *
+************************************************************************************************
+*                                                                                              *
+*   .gitignore --> Staging area’ ya gitmesini istemediğimiz, yani versiyon kontrol sistemine   *
+*                  dahil etmek istemediğimiz dosya ve klasörlerimizi tanımladığımız            *
+*                  özel bir dosyadır.                                                          *
+*                                                                                              *
+************************************************************************************************
